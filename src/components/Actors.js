@@ -2,7 +2,6 @@ import React from "react";
 import { actors } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
-
 function Actors() {
   console.log("Actors", actors);
 
@@ -12,15 +11,14 @@ function Actors() {
         <p>{name}</p>
         <ul>
           {Object.entries(movies).map((movie) => {
-            return(
-            <li key={uuidv4()}>{movie[1]}</li>);
-  })}
+            return <li key={uuidv4()}>{movie[1]}</li>;
+          })}
         </ul>
       </div>
     );
   });
 
-  console.log(actorsList)
+  console.log(actorsList);
 
   return (
     <div>
